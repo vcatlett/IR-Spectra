@@ -3,9 +3,9 @@
 
 These scripts display high-resolution near-infrared spectra from the University of Texas at Austin's [Immersion Grating Infrared Spectrometer](https://www.as.utexas.edu/astronomy/research/people/jaffe/igrins.html) (IGRINS).
 
-[Create_File_List.py](Create_File_List.py) makes a list of all of the files you want [IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) to use. 
+* [Create_File_List.py](Create_File_List.py) makes a list of all of the files you want [IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) to use. 
 
-[IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) creates an interactive environment for viewing spectra from IGRINS. The left and right arrow keys scroll through different orders in a file, the up and down arrow keys change the file, and the spacebar changes the band. 
+* [IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) creates an interactive environment for viewing spectra from IGRINS. The left and right arrow keys scroll through different orders in a file, the up and down arrow keys change the file, and the spacebar changes the band. 
 
 ## Getting Started
 
@@ -27,3 +27,7 @@ If these are not the extensions of your data, the numbers can be edited in lines
 ## Required Packages
 
 These scripts require os, numpy, astropy, and matplotlib.
+
+## Acknowledgements
+
+Our project is supported by the University of Texas at Austin's "Frontier Research and Training in Astronomy" program and is under the guidance of [Ben Tofflemire](https://github.com/tofflemire). 
