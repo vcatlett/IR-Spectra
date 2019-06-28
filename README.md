@@ -9,7 +9,7 @@ These scripts display high-resolution near-infrared spectra from the University 
 
 ## Getting Started
 
-Make sure all of your data is in the same directory. Then, replace 'Your/Path/Name/' in both [Create_File_List.py](Create_File_List.py) (line 7) and [IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) (line 123) with the path to that folder. 
+Make sure all of your data is in the same directory. Then, replace ```'Your/Path/Name/'``` in both [Create_File_List.py](Create_File_List.py) (line 7) and [IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) (line 123) with the path to that folder. 
 
 Run [Create_File_List.py](Create_File_List.py) to make a list of file names for [IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) to read. It should save in the same directory as the files themselves. 
 
