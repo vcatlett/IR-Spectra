@@ -120,7 +120,7 @@ order = int(var[1:])  # pulls the remaining characters from the input
 fcount = 0  # initial file count. Will go from 0 -> # of files - 1
 nord = 0  # Initial order count. Will change to 26 or 28 depending on the band
 
-pathname = '/Users/victoriacatlett/Documents/REU/Data/'  # change to path where your data is
+pathname = '/Your/Path/Name/'  # change to path where your data is
 fnames = np.load(pathname + band + '_star_names.npy')  # all of the star names for given band
 pulldata(fcount,fnames)  # pulls data for initial file and given band+order 
 nfiles = np.size(fnames)  # finds number of files to cycle through
