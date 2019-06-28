@@ -2,10 +2,9 @@
 # -*- coding: utf-8 -*-
 
 import numpy as np
-import os.path
 import os
 
-pathname = '/Users/victoriacatlett/Documents/REU/Data/'
+pathname = '/Your/Path/Name/'  # change to the path where your data is
 
 K_names = []
 H_names = []
