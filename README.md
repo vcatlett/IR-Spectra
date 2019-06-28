@@ -30,4 +30,4 @@ These scripts require os, numpy, astropy, and matplotlib.
 
 ## Acknowledgements
 
-Our project is supported by the University of Texas at Austin's "Frontier Research and Training in Astronomy" program and is under the guidance of [Ben Tofflemire](https://github.com/tofflemire). 
+Our project is supported by the "[Frontier Research and Training in Astronomy for the 21st Century](https://astronomy.utexas.edu/research/astronomy-reu-assure)" NSF/DoD REU-ASSURE program and the [TAURUS](https://sites.cns.utexas.edu/taurus/home) program through the University of Texas at Austin's Astronomy Department and the McDonald Observatory. We are under the guidance of [Ben Tofflemire](https://github.com/tofflemire). 
