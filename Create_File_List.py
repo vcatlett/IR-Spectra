@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Jun 13 14:22:35 2019
-
-@author: victoriacatlett
-"""
 
 import numpy as np
 import os.path
@@ -26,4 +21,3 @@ H_path = pathname + 'H_star_names.npy'
         
 np.save(K_path, K_names)
 np.save(H_path, H_names)
-
