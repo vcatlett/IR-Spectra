@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 
 # -------------------------------FUNCTIONS----------------------------------- #
 
-
 def pulldata():
     '''Pulls data from the new file'''
     global starname, flux, wave, snr, nord
@@ -15,7 +14,7 @@ def pulldata():
     starname = hdu[0].header['OBJECT']  # pulls name of the star from fits header
     flux = hdu[0].data  # the corrected target spectrum
     wave = hdu[1].data  # the wavelength data in angstroms
-    snr = hdu[3].data  # the signal-to-noise ratio 
+    snr = hdu[5].data  # the signal-to-noise ratio, may be replaced by another extension
     nord = wave.shape[0]  # establishes the number of orders in the data
     hdu.close()
 
