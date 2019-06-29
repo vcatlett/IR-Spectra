@@ -24,7 +24,7 @@ Run [Create_File_List.py](Create_File_List.py) to make a list of file names for 
 | 4 | VEGA_SPEC |
 | 5 | SNR |
 
-This script plots the wavelengths (extension 1, converted to velocities) against the adjusted spectrum (extension 0) in the top subplot and against the SNR (extension 5) in the bottom subplot. If these are not the extensions of your data, the numbers can be edited in lines 15-17. Also, since not all data has the SNR extension, you may use a different extension in line 17 for the y-values of the bottom subplot. 
+This script plots the wavelengths (extension 1, converted to velocity space) against the adjusted flux (extension 0) in the top subplot and against the SNR (extension 5) in the bottom subplot. If these are not the extensions of your data, the numbers can be edited in lines 15-17. Also, since not all data has the SNR extension, you may use a different extension in line 17 for the y-values of the bottom subplot. 
 
 ## Required Packages
 
