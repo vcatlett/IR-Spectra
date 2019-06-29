@@ -16,7 +16,7 @@ Run [Create_File_List.py](Create_File_List.py) to make a list of file names for 
 [IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) requires the data to be .fits files. It expects the extensions
 
 | No. | Name |
-|-----|----------|
+|:-----:|:----------:|
 | 0 | SPEC_DIVIDE_A0V | 
 | 1 | WAVELENGTH |
 | 2 | TGT_SPEC |
