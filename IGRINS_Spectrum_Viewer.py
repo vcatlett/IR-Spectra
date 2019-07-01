@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import numpy as np
 import astropy.io.fits as fits
 import matplotlib.pyplot as plt
@@ -14,35 +11,33 @@ def pulldata():
     starname = hdu[0].header['OBJECT']  # pulls name of the star from fits header
     flux = hdu[0].data  # the corrected target spectrum
     wave = hdu[1].data  # the wavelength data in angstroms
-    snr = hdu[5].data  # the signal-to-noise ratio, may be replaced by another extension
+    snr = hdu[3].data  # the signal-to-noise ratio 
     nord = wave.shape[0]  # establishes the number of orders in the data
-    hdu.close()
 
 
-def figure():
+def figure(order):
     '''Plots the data for a given band and order'''
-    x = wave[order]  # makes 1D wavelength array for specified order
+    x = wave[order]  # makes 1D wavelength array for specified order                         
     y1 = flux[order]  # makes 1D flux array for specified order
     y2 = snr[order]  # makes 1D array of A0V spectrum for specified order
     
-    ax1.plot(x, y1, 'r-o', ms=1.0, lw=0.5)  # plots wavelength vs. flux
+    ax1.plot(x,y1,'r-o',ms=1.0,lw=0.5)  # plots wavelength vs. flux
     ax1.set_ylim((0.5,1.75))
     ax1.set_ylabel('Flux', fontsize=12)
 
-    ax2.plot(x, y2, 'b-o', ms=1.0,lw=0.5)  # plots wavelength vs. SNR
+    ax2.plot(x,y2,'b-o',ms=1.0,lw=0.5)  # plots wavelength vs. SNR
     ax2.set_ylabel('SNR', fontsize=12)
     
     plt.xlabel('Wavelength ($\AA$)', fontsize=12)  # sets x axis label
-    fig.suptitle('%s%i Spectrum for %s' % (band, order, starname), fontsize=14)
+    fig.suptitle('%s%i Spectrum for %s' %(band,order,starname), fontsize=14)
 
 
 def pltrefresh():
     '''Clears the figure and updates the plot'''
-    global order
     ax1.clear()
     ax2.clear()
-    figure() # calls figure function
-    plt.draw() # draws updated plot
+    figure(order) #calls figure function
+    plt.draw() #draws updated plot
 
 
 def down():
@@ -107,10 +102,11 @@ def press(event):
         orderdec()
     elif event.key == ' ':  # spacebar
         switchband()
+    elif event.key == 'x':  # the letter x
+        pltrefresh()
  
 # -----------------------------END FUNCTIONS--------------------------------- #
-
-
+    
 # ----------------------------------MAIN------------------------------------- #
 
 var = input("Enter desired band and order (K# or H#): ")  # asks user for starting band/order
@@ -121,14 +117,14 @@ nord = 0  # Initial order count. Will change to 26 or 28 depending on the band
 
 pathname = '/Your/Path/Name/'  # change to path where your data is
 fnames = np.load(pathname + band + '_star_names.npy')  # all of the star names for given band
-pulldata()  # pulls data for initial file and given band+order
+pulldata()  # pulls data for initial file and given band+order 
 nfiles = np.size(fnames)  # finds number of files to cycle through
 
-fig, (ax1, ax2) = plt.subplots(2, 1, sharex='True')  # creates the figure
+fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True)  # creates the figure
 plt.subplots_adjust(hspace=0.1, wspace=1.0)
 fig.text(1, 0, 'VCatlett/MGutierrez 2019', style='italic', fontsize=8, 
          color='black', ha='right', va='bottom', alpha=0.3)
-figure()
+figure(order)
 plt.show()
 
 fig.canvas.mpl_connect('key_press_event', press)  # ready for keyboard input
