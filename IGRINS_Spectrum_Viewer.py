@@ -15,7 +15,7 @@ def pulldata():
     nord = wave.shape[0]  # establishes the number of orders in the data
 
 
-def figure(order):
+def figure():
     '''Plots the data for a given band and order'''
     x = wave[order]  # makes 1D wavelength array for specified order                         
     y1 = flux[order]  # makes 1D flux array for specified order
@@ -36,7 +36,7 @@ def pltrefresh():
     '''Clears the figure and updates the plot'''
     ax1.clear()
     ax2.clear()
-    figure(order) #calls figure function
+    figure() #calls figure function
     plt.draw() #draws updated plot
 
 
@@ -124,7 +124,7 @@ fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True)  # creates the figure
 plt.subplots_adjust(hspace=0.1, wspace=1.0)
 fig.text(1, 0, 'VCatlett/MGutierrez 2019', style='italic', fontsize=8, 
          color='black', ha='right', va='bottom', alpha=0.3)
-figure(order)
+figure()
 plt.show()
 
 fig.canvas.mpl_connect('key_press_event', press)  # ready for keyboard input
