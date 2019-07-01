@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import numpy as np
 import astropy.io.fits as fits
 import matplotlib.pyplot as plt
