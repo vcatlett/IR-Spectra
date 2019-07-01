@@ -13,7 +13,7 @@ Make sure all of your data is in the same directory. Then, replace ```'/Your/Pat
 
 Run [Create_File_List.py](Create_File_List.py) to make a list of file names for [IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) to read. It should save in the same directory as the files themselves. 
 
-[IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) requires the data to be .fits files. It expects the extensions
+[IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) requires the data to be ```fits``` files. It expects the extensions
 
 | No. | Name |
 |:-----:|:----------:|
