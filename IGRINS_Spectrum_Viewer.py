@@ -6,12 +6,12 @@ import matplotlib.pyplot as plt
 
 def pulldata():
     '''Pulls data from the new file'''
-    global starname, flux, wave, snr, nord
+    global starname, flux, wave, a0v, nord
     hdu = fits.open(pathname + fnames[fcount])  # opens data for specific star and band
     starname = hdu[0].header['OBJECT']  # pulls name of the star from fits header
     flux = hdu[0].data  # the corrected target spectrum
     wave = hdu[1].data  # the wavelength data in angstroms
-    snr = hdu[3].data  # the signal-to-noise ratio 
+    a0v = hdu[3].data  # the spectrum of nearby A0V star 
     nord = wave.shape[0]  # establishes the number of orders in the data
 
 
@@ -19,14 +19,14 @@ def figure():
     '''Plots the data for a given band and order'''
     x = wave[order]  # makes 1D wavelength array for specified order                         
     y1 = flux[order]  # makes 1D flux array for specified order
-    y2 = snr[order]  # makes 1D array of A0V spectrum for specified order
+    y2 = a0v[order]  # makes 1D array of A0V spectrum for specified order
     
     ax1.plot(x,y1,'r-o',ms=1.0,lw=0.5)  # plots wavelength vs. flux
     ax1.set_ylim((0.5,1.75))
-    ax1.set_ylabel('Flux', fontsize=12)
+    ax1.set_ylabel('Target Flux', fontsize=12)
 
     ax2.plot(x,y2,'b-o',ms=1.0,lw=0.5)  # plots wavelength vs. SNR
-    ax2.set_ylabel('SNR', fontsize=12)
+    ax2.set_ylabel('A0V Flux', fontsize=12)
     
     plt.xlabel('Wavelength ($\AA$)', fontsize=12)  # sets x axis label
     fig.suptitle('%s%i Spectrum for %s' %(band,order,starname), fontsize=14)
