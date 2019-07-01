@@ -24,11 +24,11 @@ def figure():
     y1 = flux[order]  # makes 1D flux array for specified order
     y2 = a0v[order]  # makes 1D array of A0V spectrum for specified order
     
-    ax1.plot(x,y1,'r-o',ms=1.0,lw=0.5)  # plots wavelength vs. flux
+    ax1.plot(x, y1, color = '#bf5700', marker = 'o', ls = '-', ms=1.0, lw=0.5)  # plots wavelength vs. flux
     ax1.set_ylim((0.5,1.75))
     ax1.set_ylabel('Target Flux', fontsize=12)
 
-    ax2.plot(x,y2,'b-o',ms=1.0,lw=0.5)  # plots wavelength vs. SNR
+    ax2.plot(x, y2, color = '#bf5700', marker = 'o', ls = '-', ms=1.0, lw=0.5)  # plots wavelength vs. SNR
     ax2.set_ylabel('A0V Flux', fontsize=12)
     
     plt.xlabel('Wavelength ($\AA$)', fontsize=12)  # sets x axis label
