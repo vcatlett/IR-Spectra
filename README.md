@@ -9,7 +9,7 @@ These scripts display high-resolution near-infrared spectra from the University 
 
 ## Getting Started
 
-Make sure all of your data is in the same directory. Then, replace ```'/Your/Path/Name/'``` in both line 7 of [Create_File_List.py](Create_File_List.py) and line 123 of [IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) with the path to that directory. 
+Make sure all of your data is in the same directory. Then, replace ```'/Your/Path/Name/'``` in both line 7 of [Create_File_List.py](Create_File_List.py) and line 121 of [IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) with the path to that directory. 
 
 Run [Create_File_List.py](Create_File_List.py) to make a list of file names for [IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) to read. It should save in the same directory as the files themselves. 
 
@@ -24,7 +24,7 @@ Run [Create_File_List.py](Create_File_List.py) to make a list of file names for 
 | 4 | VEGA_SPEC |
 | 5 | SNR |
 
-This script plots the wavelengths (extension 1, converted to velocity space) against the adjusted flux (extension 0) in the top subplot and against the SNR (extension 5) in the bottom subplot. If these are not the extensions of your data, the numbers can be edited in lines 15-17. Also, since not all data has the SNR extension, you may use a different extension in line 17 for the y-values of the bottom subplot. 
+This script plots the wavelengths (extension 1, converted to velocity space) against the adjusted flux (extension 0) in the top subplot and against the spectrum of a nearby A0V star (extension 3) in the bottom subplot. If these are not the extensions of your data, the numbers can be edited in lines 15-17. Extension 5, the signal-to-noise ratio, may not be present in all data, so it is not used in the script. 
 
 ## Required Packages
 
