@@ -10,9 +10,9 @@ K_names = []
 H_names = []
 
 for file in os.listdir(pathname):
-    if file.endswith('K.fits'):
+    if file.endswith('K.fits') or file.startswith('SDCK'):
         K_names.append(file)
-    elif file.endswith('H.fits'):
+    elif file.endswith('H.fits') or file.startswith('SDCH'):
         H_names.append(file)
 
 K_path = pathname + 'K_star_names.npy'
