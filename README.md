@@ -11,7 +11,7 @@ These scripts display high-resolution near-infrared spectra from the University 
 
 Make sure all of your data is in the same directory. Then, replace ```'/Your/Path/Name/'``` in both line 7 of [Create_File_List.py](Create_File_List.py) and line 121 of [IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) with the path to that directory. 
 
-Run [Create_File_List.py](Create_File_List.py) to make a list of file names for [IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) to read. It should save in the same directory as the files themselves. 
+Your file names must start with ```'SDCH'``` and ```'SDCK'``` or they must end with ```'H.fits'``` and ```'K.fits'```, otherwise you will need to adjust lines 13 and 15 of [Create_File_List.py](Create_File_List.py) accordingly. Run the script to make a list of file names that [IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) can read. Two files, ```'H_star_names.npy'``` and ```'K_star_names.npy'```, should save in the same directory as the files themselves. 
 
 [IGRINS_Spectrum_Viewer.py](IGRINS_Spectrum_Viewer.py) requires the data to be ```fits``` files. It expects the extensions
 
