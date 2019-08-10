@@ -1,5 +1,5 @@
 # IR-Spectra
-#### Created by [Victoria Catlett](https://github.com/vcatlett) and [Miguel Gutierrez](https://github.com/mgutierrez32)
+#### Created by [Victoria Catlett](https://github.com/vcatlett) and [Miguel Gutiérrez](https://github.com/mgutierrez32)
 
 These scripts display high-resolution near-infrared spectra from the University of Texas at Austin's [Immersion Grating Infrared Spectrometer](https://www.as.utexas.edu/astronomy/research/people/jaffe/igrins.html) (IGRINS).
 
